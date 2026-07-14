@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Fix: the README preview image now loads on the Marketplace page (it used a relative path pointing at a non-existent repository). It now references an absolute URL in the published GitHub repository.
+
 ## 1.0.2
 
 - Faster startup: the extension now activates during launch (instead of after) and draws the crosshair before applying theme/color writes, so the green-screen look appears almost immediately.
