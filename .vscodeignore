@@ -1,0 +1,9 @@
+.vsixmanifest
+publish.sh
+*.vsix
+.vscode/**
+.gitignore
+**/tsconfig.json
+**/*.map
+**/.DS_Store
+scripts/**

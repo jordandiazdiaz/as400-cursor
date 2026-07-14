@@ -1,0 +1,171 @@
+{
+	"name": "as400-cursor",
+	"displayName": "AS/400 Green Screen (5250) — Theme & Crosshair Cursor",
+	"description": "IBM AS/400 (iSeries) 5250 green-screen color theme plus a configurable crosshair cursor. Black background, phosphor-green text, and a real 5250-style cross cursor.",
+	"version": "1.0.2",
+	"publisher": "jordan-diaz-dev",
+	"license": "MIT",
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jordandiazdiaz/as400-cursor"
+	},
+	"bugs": {
+		"url": "https://github.com/jordandiazdiaz/as400-cursor/issues"
+	},
+	"homepage": "https://github.com/jordandiazdiaz/as400-cursor#readme",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"keywords": [
+		"AS400",
+		"iSeries",
+		"IBM i",
+		"5250",
+		"crosshair",
+		"cursor",
+		"terminal",
+		"green screen",
+		"retro"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "as400Cursor.toggle",
+				"title": "AS400 Cursor: Toggle Crosshair"
+			},
+			{
+				"command": "as400Cursor.enable",
+				"title": "AS400 Cursor: Enable"
+			},
+			{
+				"command": "as400Cursor.disable",
+				"title": "AS400 Cursor: Disable"
+			},
+			{
+				"command": "as400Cursor.cycleMode",
+				"title": "AS400 Cursor: Cycle Display Mode (Full/Local/Hybrid)"
+			}
+		],
+		"configuration": {
+			"title": "AS/400 Crosshair Cursor",
+			"properties": {
+				"as400Cursor.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable the crosshair cursor."
+				},
+				"as400Cursor.color": {
+					"type": "string",
+					"default": "#00FF00",
+					"description": "Color of the crosshair lines (hex value)."
+				},
+				"as400Cursor.lineWidth": {
+					"type": "number",
+					"default": 1,
+					"minimum": 1,
+					"maximum": 5,
+					"description": "Width of crosshair lines in pixels."
+				},
+				"as400Cursor.opacity": {
+					"type": "number",
+					"default": 0.8,
+					"minimum": 0.1,
+					"maximum": 1,
+					"description": "Opacity of the crosshair lines (0.1 - 1.0)."
+				},
+				"as400Cursor.mode": {
+					"type": "string",
+					"enum": [
+						"full",
+						"local",
+						"hybrid"
+					],
+					"enumDescriptions": [
+						"Lines extend across the entire visible editor viewport.",
+						"Cross only around the current character (like a real 5250 cursor).",
+						"Local cross with faint guide lines extending to the viewport edges."
+					],
+					"default": "full",
+					"description": "Crosshair display mode."
+				},
+				"as400Cursor.lineStyle": {
+					"type": "string",
+					"enum": [
+						"solid",
+						"dotted",
+						"dashed"
+					],
+					"default": "solid",
+					"description": "Style of the crosshair lines."
+				},
+				"as400Cursor.verticalExtent": {
+					"type": "string",
+					"enum": [
+						"character",
+						"viewport"
+					],
+					"default": "viewport",
+					"description": "How far the vertical line extends (only applies in 'full' mode)."
+				},
+				"as400Cursor.horizontalExtent": {
+					"type": "string",
+					"enum": [
+						"character",
+						"line"
+					],
+					"default": "line",
+					"description": "How far the horizontal line extends (only applies in 'full' mode)."
+				},
+				"as400Cursor.fullAS400Mode": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable full AS/400 green-screen theme (black background, green text, crosshair cursor)."
+				},
+				"as400Cursor.blinkEffect": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable a CRT-style blink effect on the crosshair intersection."
+				},
+				"as400Cursor.multiCursorSupport": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show crosshairs for all cursors when using multi-cursor."
+				},
+				"as400Cursor.guideOpacity": {
+					"type": "number",
+					"default": 0.25,
+					"minimum": 0.05,
+					"maximum": 0.5,
+					"description": "Opacity of the guide lines in hybrid mode."
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "as400Cursor.toggle",
+				"key": "ctrl+alt+x",
+				"mac": "cmd+alt+x"
+			}
+		],
+		"themes": [
+			{
+				"label": "AS/400 Green Screen (5250)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/as400-green-screen.json"
+			}
+		]
+	}
+}
