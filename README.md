@@ -2,7 +2,7 @@
 
 Bring the classic **IBM AS/400 / iSeries 5250** terminal to VS Code: a black-and-phosphor-green color theme **plus** a fully configurable crosshair cursor that mimics the real 5250 display cursor.
 
-![green screen](https://raw.githubusercontent.com/jordandiazdiaz/as400-cursor/main/icon.png)
+![AS/400 Green Screen theme in VS Code](https://raw.githubusercontent.com/jordandiazdiaz/as400-cursor/main/images/screenshot.png)
 
 ## Features
 

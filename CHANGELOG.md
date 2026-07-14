@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Docs: the README now shows a real screenshot of the AS/400 Green Screen theme running in VS Code.
+
 ## 1.0.3
 
 - Fix: the README preview image now loads on the Marketplace page (it used a relative path pointing at a non-existent repository). It now references an absolute URL in the published GitHub repository.

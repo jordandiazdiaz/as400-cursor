@@ -2,7 +2,7 @@
 	"name": "as400-cursor",
 	"displayName": "AS/400 Green Screen (5250) — Theme & Crosshair Cursor",
 	"description": "IBM AS/400 (iSeries) 5250 green-screen color theme plus a configurable crosshair cursor. Black background, phosphor-green text, and a real 5250-style cross cursor.",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "jordan-diaz-dev",
 	"license": "MIT",
 	"icon": "icon.png",
